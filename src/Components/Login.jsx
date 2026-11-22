@@ -61,10 +61,9 @@ function Login() {
                 > Login
                 </button>
 
-                <p className="text-center text-gray-500 text-xs mt-7">
+                <p className="text-center text-white text-xs mt-7">
                     © 2026 UniResolve. All rights reserved.
                 </p>
-
             </div>
         </div>
     );
