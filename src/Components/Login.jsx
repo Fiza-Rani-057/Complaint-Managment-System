@@ -2,7 +2,7 @@
 function Login() {
     return (
         <div className="min-h-screen bg-[#111426]
-     flex items-center justify-center p-5 bitcount-single">
+     flex items-center justify-center p-5 alfa-slab-one-regular ">
             <div className="w-full max-w-md bg-[#191D32]
        border border-[#292E46] rounded-[28px] p-8 shadow-[0_0_20px_rgba(93,214,44,0.35)]">
                 <div className="text-center mb-8 ">
@@ -53,9 +53,12 @@ function Login() {
                     />
                 </div>
                 <button
-                    className="w-full bg-[#5DD62C] text-[#111426] font-bold py-3.5 rounded-2xl shadow-[0_0_18px_rgba(93,214,44,0.25)] hover:shadow-[0_0_28px_rgba(93,214,44,0.45)] hover:scale-[1.02] transition-all duration-300"
-                >
-                    Login
+                    className="w-full bg-[#5DD62C] text-[#111426] 
+                    font-bold py-3.5 rounded-2xl 
+                    shadow-[0_0_18px_rgba(93,214,44,0.25)]
+                     hover:shadow-[0_0_28px_rgba(93,214,44,0.45)] 
+                     hover:scale-[1.02] transition-all duration-300"
+                > Login
                 </button>
 
                 <p className="text-center text-gray-500 text-xs mt-7">
