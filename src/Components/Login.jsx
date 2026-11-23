@@ -34,7 +34,6 @@ function Login() {
                          transition-all duration-300"
                     />
                 </div>
-
                 <div className="mb-6">
                     <label className="block text-gray-300 text-sm mb-2">
                         Password
