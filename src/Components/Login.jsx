@@ -57,7 +57,8 @@ function Login() {
                     font-bold py-3.5 rounded-2xl  text-lg
                     shadow-[0_0_18px_rgba(93,214,44,0.25)] font-bold
                      hover:shadow-[0_0_28px_rgba(93,214,44,0.45)] 
-                     hover:scale-[1.02] transition-all duration-300"
+                     hover:scale-[1.02] transition-all duration-300
+                     hover: cursor-pointer"
                 > Login
                 </button>
 
