@@ -18,11 +18,33 @@ function Login() {
             showNotification("Please enter your Email", "error");
         }
         else if (password === "") {
-            showNotification("Please Enter Your Password", "error")
-
+            showNotification("Please enter your Password", "error");
+        }
+        else if (
+            email === users.admin.email &&
+            password === users.admin.password
+        ) {
+            showNotification(" Login Successful!", "success");
+        }
+        else if (
+            email === users.student.email &&
+            password === users.student.password
+        ) {
+            showNotification(" Login Successful!", "success");
         }
         else {
-            showNotification("Login Successful!", "success");
+            showNotification("Invalid Email or Password!", "error");
+        }
+    };
+
+    const users = {
+        admin: {
+            email: "admin@gmail.com",
+            password: "admin123"
+        },
+        student: {
+            email: "student@gmail.com",
+            password: "student123"
         }
     }
     return (
