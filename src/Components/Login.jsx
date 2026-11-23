@@ -21,6 +21,9 @@ function Login() {
             showNotification("Please Enter Your Password", "error")
 
         }
+        else {
+            showNotification("Login Successful!", "success");
+        }
     }
     return (
         <>
@@ -42,53 +45,44 @@ function Login() {
                             Login to manage your complaints.
                         </p>
                     </div>
-                    <div className="mb-5">
-                        <label className="block text-gray-300 text-sm mb-2">
-                            Email Address
-                        </label>
 
-                        <input
-                            type="email"
-                            value={email}
-                            placeholder="Enter your email"
-                            className="w-full bg-[#111426] border border-[#30364F] 
-                        rounded-2xl px-4 py-3.5 text-white outline-none 
-                         focus:border-[#5DD62C]
-                         focus:shadow-[0_0_35px_rgba(93,214,44,0.7)]
-                         transition-all duration-300"
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                    </div>
-                    <div className="mb-6">
-                        <label className="block text-gray-300 text-sm mb-2">
-                            Password
-                        </label>
+                    <form onSubmit={handleSubmit}>
 
-                        <input
-                            type="password"
-                            value={password}
-                            placeholder="Enter your password"
-                            className="w-full bg-[#111426]
-                          border border-[#30364F] 
-                          rounded-2xl px-4 py-3.5
-                          text-white outline-none 
-                         focus:border-[#5DD62C]
-                         focus:shadow-[0_0_35px_rgba(93,214,44,0.7)]
-                         transition-all duration-300"
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                    </div>
-                    <button
-                        type="submit"
-                        onSubmit={handleSubmit}
-                        className="w-full bg-[#5DD62C] text-[#111426] 
-                    font-bold py-3.5 rounded-2xl  text-lg
-                    shadow-[0_0_18px_rgba(93,214,44,0.25)] font-bold
-                     hover:shadow-[0_0_28px_rgba(93,214,44,0.45)] 
-                     hover:scale-[1.02] transition-all duration-300
-                     hover: cursor-pointer"
-                    > Login
-                    </button>
+                        <div className="mb-5">
+                            <label className="block text-gray-300 text-sm mb-2">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                value={email}
+                                placeholder="Enter your email"
+                                className="w-full bg-[#111426] border border-[#30364F] rounded-2xl px-4 py-3.5 text-white outline-none focus:border-[#5DD62C] focus:shadow-[0_0_35px_rgba(93,214,44,0.7)] transition-all duration-300"
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                        </div>
+
+                        <div className="mb-6">
+                            <label className="block text-gray-300 text-sm mb-2">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                value={password}
+                                placeholder="Enter your password"
+                                className="w-full bg-[#111426] border border-[#30364F] rounded-2xl px-4 py-3.5 text-white outline-none focus:border-[#5DD62C] focus:shadow-[0_0_35px_rgba(93,214,44,0.7)] transition-all duration-300"
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+                        </div>
+
+                        <button
+                            type="submit"
+                            className="w-full bg-[#5DD62C] text-[#111426] font-bold py-3.5 rounded-2xl text-lg cursor-pointer"
+                        >
+                            Login
+                        </button>
+                    </form>
 
                     <p className="text-center text-white text-xs mt-7">
                         © 2026 UniResolve. All rights reserved.
@@ -99,12 +93,14 @@ function Login() {
                 <div className={`fixed top-5 right-5 flex items-center gap-3
                     p-4 rounded-xl shadow-lg z-50
                     ${toastType === "error"
-                        ? "bg-red-100 text-red-700"
-                        : "bg-green-100 text-green-700"
+                        ? "bg-red-100 text-white-"
+                        : "bg-green-100 text-green"
                     }`}>
-
-                    <span className="text-xl">
-                        {toastType === "error" ? "❌" : "✓"}
+                    <span
+                        className="text-xl cursor-pointer"
+                        onClick={() => setShowToast(false)}
+                    >
+                        {toastType === "error" ? "❌" : "✔"}
                     </span>
 
                     <p className="font-semibold">
