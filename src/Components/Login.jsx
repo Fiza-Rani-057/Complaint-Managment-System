@@ -107,7 +107,7 @@ function Login() {
                     </form>
 
                     <p className="text-center text-white text-xs mt-7">
-                        © 2026 UniResolve. All rights reserved.
+                        © 2026 CoreResolve. All rights reserved.
                     </p>
                 </div>
             </div>
