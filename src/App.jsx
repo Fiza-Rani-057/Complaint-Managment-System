@@ -2,7 +2,7 @@
 // import Sidebar from "./Components/stdSidebar.jsx";
 // import Navbar from "./Components/StdHeader.jsx";
 // import ComplaintCards from "./Components/ComplaintCards.jsx";
-import Charts from "./Components/stdCharts";
+// import Charts from "./Components/stdCharts";
  function App(){
     return(
         <>
@@ -10,7 +10,7 @@ import Charts from "./Components/stdCharts";
         {/* // <Sidebar/> */}
         {/* <Navbar/> */}
         {/* <ComplaintCards/> */}
-        <Charts/>
+        {/* <Charts/> */}
         </>
     
     )
