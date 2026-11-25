@@ -13,7 +13,6 @@
         Recent Complaints
       </h2>
     </div>
-
     <button
     //   onClick={onViewAll}
       className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#141f14] hover:bg-[#1b2b1b] border border-[#5a9626]/60 text-[#9ef249] text-[12.5px] font-medium transition-colors"
@@ -22,7 +21,6 @@
       <span>→</span>
     </button>
   </div>
-
   <div className="overflow-x-auto">
     <table className="w-full text-left border-collapse min-w-[680px]">
       <thead>
