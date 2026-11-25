@@ -11,7 +11,6 @@ function ComplaintCards() {
                             Here&apos;s an overview of your complaint activity.
                         </p>
                     </div>
-
                     <button
                         // onClick={onSubmitClick}
                         className="inline-flex items-center gap-2 px-4 py-2.5 
