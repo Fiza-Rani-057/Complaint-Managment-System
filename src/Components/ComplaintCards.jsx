@@ -140,7 +140,6 @@ function ComplaintCards() {
                                 <span className="text-[13px] text-[#9ca3af] font-normal">In Progress</span>
                             </div>
                         </div>
-
                         <svg
                             viewBox="0 0 280 55"
                             fill="none"
