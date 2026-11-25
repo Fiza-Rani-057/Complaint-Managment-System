@@ -27,7 +27,7 @@ const Sidebar = ({ isOpen, setIsOpen, activeTab = "dashboard",
         }`}
       >
         <div
-          className="pointer-events-none absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-40 rounded-full opacity-35 blur-3xl"
+          className="pointer-events-none absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-40 rounded-full opacity-35 b=lur-3xl"
           style={{ background: "radial-gradient(circle, #76e01b 0%, transparent 70%)" }}
         />
         <div
