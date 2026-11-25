@@ -1,7 +1,8 @@
 
 import React, { useState } from "react";
 
-const Sidebar = ({ isOpen, setIsOpen, activeTab = "dashboard", setActiveTab, onLogout }) => {
+const Sidebar = ({ isOpen, setIsOpen, activeTab = "dashboard",
+     setActiveTab, onLogout }) => {
   const [currentTab, setCurrentTab] = useState(activeTab);
 
   const handleSelect = (id) => {
@@ -198,7 +199,10 @@ const Sidebar = ({ isOpen, setIsOpen, activeTab = "dashboard", setActiveTab, onL
             </button>
             <button
               onClick={onLogout}
-              className="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-[13.5px] font-medium text-[#d1d5db] hover:bg-white/[0.04] hover:text-white border border-transparent transition-all duration-200"
+              className="w-full flex items-center gap-3 px-3.5 py-2.5 
+              rounded-lg text-[13.5px] font-medium text-[#d1d5db]
+               hover:bg-white/[0.04] hover:text-white
+                border border-transparent transition-all duration-200"
             >
               <svg
                 viewBox="0 0 20 20"
