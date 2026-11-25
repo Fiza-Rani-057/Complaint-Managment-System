@@ -14,7 +14,9 @@ function ComplaintCards() {
 
                     <button
                         // onClick={onSubmitClick}
-                        className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#8be836] hover:bg-[#99f542] text-[#070b07] text-[13.5px] font-semibold shadow-[0_0_20px_rgba(139,232,54,0.3)] transition-all"
+                        className="inline-flex items-center gap-2 px-4 py-2.5 
+                  rounded-lg bg-[#8be836] hover:bg-[#99f542] text-[#070b07] text-[13.5px] font-semibold 
+                  shadow-[0_0_20px_rgba(139,232,54,0.3)] transition-all"
                     >
                         <span className="text-base leading-none font-bold">+</span>
                         <span>Submit New Complaint</span>
