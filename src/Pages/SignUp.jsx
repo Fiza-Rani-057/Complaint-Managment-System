@@ -15,7 +15,7 @@ function SignUp({ onSignin }) {
         {/* Left Dark Panel */}
         <div className="w-full md:w-[48%] bg-[#090A0C] text-white p-8 sm:p-10 flex flex-col justify-between relative z-10">
           <div className="mt-10 pr-6">
-            <h1 className="text-5xl sm:text-6xl mt-15 font-extrabold tracking-wide text-white uppercase leading-tight">
+            <h1 className="text-8xl sm:text-6xl mt-15 font-extrabold tracking-wide text-white uppercase leading-tight">
               JOIN US
             </h1>
 
@@ -24,7 +24,8 @@ function SignUp({ onSignin }) {
             </h2>
           </div>
 
-          <div className="space-y-3 text-gray-300 text-sm mb-28">
+          <div className="space-y-3 text-gray-300 mb-28
+          " style={{font: "18px"}}>
             <p>✓ Create Your Account in Seconds</p>
             <p>✓ Submit Complaints Easily</p>
             <p>✓ Track Real-Time Status Updates</p>

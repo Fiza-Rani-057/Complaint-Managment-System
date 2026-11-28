@@ -35,7 +35,7 @@ function Login({onSignUp}) {
           </div>
           <div
             className="space-y-3 text-gray-300  mb-25"
-            style={{ font: "20px" }}
+            style={{ font: "18px" }}
           >
             <p>✓ Submit Complaints Easily</p>
             <p>✓ Track Complaint Status</p>
