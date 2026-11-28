@@ -22,13 +22,12 @@ function Login() {
             <h2
               className="mt-3 text-base 
               sm:text-lg font-bold tracking-wider
-             text-[#E6FF00] uppercase leading-snug max-w-xs"
+             text-[#E6FF00] uppercase leading-snug max-w-xs
+             mb-0"
             >
               COMPLAINT MANAGEMENT SYSTEM
             </h2>
           </div>
-          {/* Bottom Spacer for Balanced Alignment */}
-          <div className="h-4" />
           <div className="space-y-3 text-gray-300 text-sm">
             <p>✓ Submit Complaints Easily</p>
             <p>✓ Track Complaint Status</p>
