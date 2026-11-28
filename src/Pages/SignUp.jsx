@@ -1,11 +1,11 @@
- import { useState } from "react";
-function SignUp({onSignin}) {
-    const [name , setname] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setpassword] = useState("");
-    const [showpassword, setShowpassword] = useState(false);
-    const [confirm, setconfirm] = useState("");
-    
+import { useState } from "react";
+function SignUp({ onSignin }) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setpassword] = useState("");
+  const [showpassword, setShowpassword] = useState(false);
+  const [confirm, setconfirm] = useState("");
+  const [error, setError] = useState("");
   return (
     <div className="min-h-screen w-full bg-[#0D0E10] flex items-center justify-center p-0 font-sans">
       <div className="relative w-full min-h-screen bg-white overflow-hidden flex flex-col md:flex-row">
@@ -13,13 +13,17 @@ function SignUp({onSignin}) {
         <div className="w-full md:w-[48%] bg-[#090A0C] text-white p-8 sm:p-10 flex flex-col justify-between relative z-10">
           {/* Top Heading & Neon Subtitle */}
           <div className="mt-10 pr-6">
-            <h1 className="text-5xl sm:text-6xl
-             mt-15 font-extrabold tracking-wide text-white uppercase leading-tight">
+            <h1
+              className="text-5xl sm:text-6xl
+             mt-15 font-extrabold tracking-wide text-white uppercase leading-tight"
+            >
               JOIN US
             </h1>
-            <h2 className="mt-3 text-base 
+            <h2
+              className="mt-3 text-base 
             sm:text-lg font-bold tracking-wider
-             text-[#E6FF00] uppercase leading-snug max-w-xs">
+             text-[#E6FF00] uppercase leading-snug max-w-xs"
+            >
               COMPLAINT MANAGEMENT SYSTEM
             </h2>
           </div>
@@ -48,6 +52,8 @@ function SignUp({onSignin}) {
               <div className="relative">
                 <input
                   type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   placeholder="Full Name"
                   className="w-full h-11 pl-4 pr-10 text-sm text-[#111827] placeholder-[#6B7280] bg-white border border-[#D1D5DB] rounded-lg outline-none focus:border-[#090A0C] transition-colors"
                 />
@@ -61,6 +67,8 @@ function SignUp({onSignin}) {
               <div className="relative">
                 <input
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Email Address"
                   className="w-full h-11 pl-4 pr-10 text-sm text-[#111827] placeholder-[#6B7280] bg-white border border-[#D1D5DB] rounded-lg outline-none focus:border-[#090A0C] transition-colors"
                 />
@@ -73,18 +81,18 @@ function SignUp({onSignin}) {
               {/* Password Input */}
               <div className="relative">
                 <input
-                  type="password"
+                  type={showpassword ? "text" : "password"}
                   placeholder="Password"
+                  value={password}
+                  onChange={(e) => setpassword(e.target.value)}
                   className="w-full h-11 pl-4 pr-20 text-sm text-[#111827] placeholder-[#6B7280] bg-white border border-[#D1D5DB] rounded-lg outline-none focus:border-[#090A0C] transition-colors"
                 />
                 <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1.5 text-[#374151] select-none">
-                  <i
-                    className="fa-solid fa-lock text-xs"
-                    aria-hidden="true"
-                  />
+                  <i className="fa-solid fa-lock text-xs" aria-hidden="true" />
                   <span className="text-[11px] font-bold tracking-wider uppercase text-[#111827]">
                     SHOW
                   </span>
+                  <button></button>
                 </div>
               </div>
 
@@ -93,6 +101,15 @@ function SignUp({onSignin}) {
                 <input
                   type="password"
                   placeholder="Confirm Password"
+                  value={confirm}
+                  onChange={(e) => {
+                    setconfirm(e.target.value);
+                    if (e.target.value !== password) {
+                      setError("Password don't match");
+                    } else {
+                      setError("");
+                    }
+                  }}
                   className="w-full h-11 pl-4 pr-10 text-sm text-[#111827] placeholder-[#6B7280] bg-white border border-[#D1D5DB] rounded-lg outline-none focus:border-[#090A0C] transition-colors"
                 />
                 <i
