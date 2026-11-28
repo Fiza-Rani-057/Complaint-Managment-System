@@ -1,4 +1,9 @@
+import { useState } from "react";
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPasword, setshowPasword] = useState("");
+  const [error, setError] = useState(false);
   return (
     <div className="min-h-screen w-full bg-[#0D0E10] flex items-center justify-center p-0 font-sans">
       <div className="relative w-full min-h-screen bg-white overflow-hidden flex flex-col md:flex-row">
@@ -56,6 +61,8 @@ function Login() {
               <div className="relative">
                 <input
                   type="text"
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
                   placeholder="User Name"
                   className="w-full h-11 pl-4 pr-10 text-sm text-[#111827] placeholder-[#6B7280] bg-white border border-[#D1D5DB] rounded-lg outline-none focus:border-[#090A0C] transition-colors"
                 />
@@ -67,17 +74,23 @@ function Login() {
               {/* Password Input */}
               <div className="relative">
                 <input
-                  type="password"
+                  type={showPasword ? "text" : "password"}
+                  onChange={(e) => setPassword(e.target.value)}
                   placeholder="Password"
+                  value={password}
                   className="w-full h-11 pl-4 pr-20 text-sm text-[#111827] placeholder-[#6B7280] bg-white border border-[#D1D5DB] rounded-lg outline-none focus:border-[#090A0C] transition-colors"
                 />
                 <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1.5 text-[#374151] select-none">
-                  <span className="material-symbols-outlined text-base">
-                    lock
-                  </span>
-                  <span className="text-[11px] font-bold tracking-wider uppercase text-[#111827]">
-                    SHOW
-                  </span>
+                  <span className="text-[11px] font-bold tracking-wider uppercase text-[#111827]"></span>
+                  <button
+                    type="button"
+                    className="text-[11px] font-bold tracking-wider uppercase text-[#111827]"
+                    onClick={() => setshowPasword(!showPasword)}
+                  >
+                    <span className="material-symbols-outlined text-lg">
+                      {showPasword ? "visibility_off" : "visibility"}
+                    </span>
+                  </button>
                 </div>
               </div>
 
