@@ -93,7 +93,6 @@ function Login() {
                   </button>
                 </div>
               </div>
-
               {/* Remember Me & Forgot Password */}
               <div className="flex items-center justify-between pt-1 pb-2 text-xs">
                 <label className="flex items-center gap-2 text-[#374151] cursor-pointer select-none">
