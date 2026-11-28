@@ -1,5 +1,5 @@
 import { useState } from "react";
-function Login() {
+function Login({onSignUp}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPasword, setshowPasword] = useState("");
@@ -114,7 +114,8 @@ function Login() {
               {/* Primary Sign In Button */}
               <button
                 type="button"
-                className="w-full h-11 bg-[#0F1012] hover:bg-[#1F2126] text-white text-sm font-medium rounded-lg transition-colors"
+                className="w-full h-11 bg-[#0F1012]
+                hover: cursor-pointer  hover:bg-[#1F2126] text-white text-sm font-medium rounded-lg transition-colors"
               >
                 Sign In
               </button>
@@ -136,6 +137,7 @@ function Login() {
               Don&apos;t have an account?{" "}
               <button
                 type="button"
+                onClick={onSignUp}
                 className="font-bold text-[#111827] hover:underline ml-0.5"
               >
                 Sign Up
