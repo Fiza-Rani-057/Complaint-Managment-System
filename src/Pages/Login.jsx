@@ -10,9 +10,9 @@ function Login() {
           }}
         >
           {/* Top Logo */}
-
+          
           {/* Center Welcome Copy */}
-          <div className="mt-10 mb-auto py-12 pr-6">
+          <div className="mt-10 py-12 pr-6">
             <h1
               className="text-5xl sm:text-6xl font-extrabold 
             tracking-wide text-white uppercase leading-tight"
