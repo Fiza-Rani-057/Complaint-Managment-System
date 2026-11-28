@@ -10,14 +10,14 @@ function Login() {
           }}
         >
           {/* Top Logo */}
-          
+
           {/* Center Welcome Copy */}
           <div className="mt-10 py-12 pr-6">
             <h1
               className="text-5xl sm:text-6xl font-extrabold 
-            tracking-wide text-white uppercase leading-tight"
+            tracking-wide text-white uppercase leading-tight mt-6"
             >
-              WELCOME TO
+              WELCOME
             </h1>
             <h2
               className="mt-3 text-base 
@@ -28,7 +28,10 @@ function Login() {
               COMPLAINT MANAGEMENT SYSTEM
             </h2>
           </div>
-          <div className="space-y-3 text-gray-300 text-sm">
+          <div
+            className="space-y-3 text-gray-300  mb-25"
+            style={{ font: "20px" }}
+          >
             <p>✓ Submit Complaints Easily</p>
             <p>✓ Track Complaint Status</p>
             <p>✓ Quick & Transparent Resolution</p>
